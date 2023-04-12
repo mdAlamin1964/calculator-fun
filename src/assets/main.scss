@@ -1,0 +1,138 @@
+@import 'config';
+
+body {
+    @include background-gradient;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.4s;
+}
+
+
+.cal-body {
+    width: 300px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+
+.happy-box {
+    height: 100px;
+}
+
+.display-happy-text {
+    width: 400px;
+    margin: auto;
+    margin-top: 10vh;
+    padding: 0 15px;
+    border-radius: 10px;
+    @include neon-glow-pink;
+    border:2px solid #ffc0cb;
+    color:white;
+    font-weight: 400;
+    font-family: 'Forum', cursive;
+    font-size: 20px;
+    text-align: justify;
+}
+
+@include mobile {
+    .display-happy-text {
+        width: 250px;
+        font-size: 16px;
+    }
+}
+
+
+
+
+.cal-display {
+    border:2px solid #ffc0cb;
+    @include neon-glow-pink;
+    padding: 25px;
+    border-radius: 10px 10px 0 0;
+    &-result {
+        border:2px solid #ffc0cb;
+        @include neon-glow-pink;
+        padding:10px;
+        height: 40px;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        color: $display-color;
+        justify-content: end;
+    }
+}
+
+
+.cal-input {
+    @include neon-glow-blue;
+    border: 2px solid #f6fffb;
+    border-top: none;
+    box-shadow: 0px 1px 8px 4px rgba(53, 191, 245, 0.86);
+    margin-top: 3px;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    &-top {
+        display: grid;
+        grid-template-columns: 22% 22% 22% 22%;
+        grid-column-gap:4%;
+        justify-content: center;
+    }
+
+
+    &-bottom {
+        display: grid;
+        grid-template-columns: 73% 23%;
+        grid-column-gap: 5%;
+
+        &-left {
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            grid-column-gap: 5%;
+        }
+        &-right {
+            button {
+                height: 88% !important;
+                width: 95%;
+            }
+            .btn-equal {
+                @include neon-glow-oreng;
+                border:2px solid rgb(255, 248, 147)
+            }
+        }
+    }
+
+    button {
+        border: 2px solid #f6fffb;
+        border-radius: 3px;
+        @include neon-glow-blue;
+        background: transparent;
+        color:white;
+        font-size: 25px;
+        margin-bottom: 15px;
+        height: 45px;
+        @include text-shadow-blue;
+    }
+    .btn-ac {
+        @include neon-glow-red; 
+        border: 2px solid #f45755;
+    }
+}
+
+
+// copy-rights
+.copy-right {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    a{
+        color: white;
+        font-size: 14px;
+        @include add-transition;
+        text-decoration: none;
+    }
+    a:hover {
+        font-size: 16px;
+    }
+}
+
+
