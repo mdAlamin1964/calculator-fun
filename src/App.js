@@ -8,19 +8,6 @@ export default function App() {
     const [newDis, setNewDis] = React.useState("");
     const[quotes, setQuotes] = React.useState("");
 
-    let apiOptions ={
-        method: 'GET',
-        headers: {'x-api-key': 'ChZgW8qKLWoBQjOLM9YYDw==VQeV5rYlXdckgYmd'}
-    }
-
-    React.useEffect(() => {
-        fetch('https://api.api-ninjas.com/v1/quotes?category=',apiOptions)
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(err => console.log(err))
-    },[]);
-
-    console.log("display",display.length);
     // getting click object value
     function handleClick(obj){
         const currentvalue = obj.target.value;
@@ -43,6 +30,8 @@ export default function App() {
         }
     }
 
+
+
   // set default values
     function setDefault() {
         setDisplay("");
@@ -51,10 +40,17 @@ export default function App() {
         setNewDis("");
         setQuotes("");
     }
+
+
+
+
     // fixd num result 
     function fixNumber(num) {
         return String(num).includes('.')? num.toFixed(2) : num ;
     }
+
+
+
 
     // executing math
     function calculation() {
@@ -80,6 +76,8 @@ export default function App() {
           showQuotes(text)
         }
     }
+
+
     // displaying butons on the interface
     function addingButtons(value) {
        return (
@@ -4427,11 +4425,6 @@ export default function App() {
         author: textObj.Author
       });
   }
-
-    
-    const showText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec mauris ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris sapien magna.";
-    
-    console.log(quotesRaw);
 
     const styleDisplay = {
       fontSize: newDis.toString().length > 10 || display.toString().length > 10? "20px" : "40px" 
