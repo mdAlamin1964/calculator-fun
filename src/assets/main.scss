@@ -33,14 +33,6 @@ body {
     text-align: justify;
 }
 
-@include mobile {
-    .display-happy-text {
-        width: 250px;
-        font-size: 16px;
-    }
-}
-
-
 
 
 .cal-display {
@@ -136,3 +128,10 @@ body {
 }
 
 
+// Responsive  
+@include mobile {
+    .display-happy-text {
+        width: 250px;
+        font-size: 16px;
+    }
+}

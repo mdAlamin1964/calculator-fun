@@ -30,12 +30,6 @@ body {
   text-align: justify;
 }
 
-@media (max-width: 440px) {
-  .display-happy-text {
-    width: 250px;
-    font-size: 16px;
-  }
-}
 .cal-display {
   border: 2px solid #ffc0cb;
   box-shadow: 0px 0px 8px 5px rgba(222, 5, 255, 0.86);
@@ -118,4 +112,11 @@ body {
 }
 .copy-right a:hover {
   font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .display-happy-text {
+    width: 250px;
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=main.css.map */
